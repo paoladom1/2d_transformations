@@ -1,38 +1,68 @@
-.App {
+html,
+body, #root {
+  height: 100vh;
+}
+
+.Container {
+  align-items: center;
+  background-color: oldlace;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  max-height: 100%;
+  padding: 0 50px;
   text-align: center;
+  max-width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.4rem;
+  height: 100%;
+  outline: inherit;
+  width: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Canvas {
+  background-color: white;
+  border: 1px solid black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CanvasContainer {
+  flex: 1;
+}
+
+.Control {
+  border: 1px solid black;
+  display: flex;
+  height: 40px;
+  margin: 20px;
+  width: 160px;
+}
+
+.ControlContainer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ControlsContainer {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Level {
+  align-items: center;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 80px;
 }

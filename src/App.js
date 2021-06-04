@@ -70,16 +70,26 @@ function App() {
   };
 
   return (
-    <div className="Container">
-      <div className="CanvasContainer">
+    <div className="container">
+      <div className="canvas-container">
         <Canvas
           target={canvasRef}
           width={CANVAS_WIDTH}
           height={CANVAS_HEIGHT}
         />
+        <div className="lines">
+          <span>Line 1:</span>
+          <div className="red"></div>
+          <span>Line 2:</span>
+          <div className="blue"></div>
+          <span>Line 3:</span>
+          <div className="green"></div>
+          <span>Line 4:</span>
+          <div className="black"></div>
+        </div>
       </div>
-      <div className="ControlsContainer">
-        <div className="ControlContainer">
+      <div className="controls-container">
+        <div className="control-container">
           <span>Traslation Control</span>
           <ControlButton
             min={0}
@@ -88,7 +98,7 @@ function App() {
             onDecrease={decreaseTraslation}
           />
         </div>
-        <div className="ControlContainer">
+        <div className="control-container">
           <span>Scalation Control</span>
           <ControlButton
             label={scale}
@@ -96,7 +106,7 @@ function App() {
             onDecrease={decreasescale}
           />
         </div>
-        <div className="ControlContainer">
+        <div className="control-container">
           <span>Rotation Control</span>
           <ControlButton
             min={0}

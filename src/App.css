@@ -3,7 +3,7 @@ body, #root {
   height: 100vh;
 }
 
-.Container {
+.container {
   align-items: center;
   background-color: oldlace;
   display: flex;
@@ -15,7 +15,15 @@ body, #root {
   max-width: 100%;
 }
 
-.Button {
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.button {
   background: none;
   border: none;
   color: inherit;
@@ -26,16 +34,16 @@ body, #root {
   width: 40px;
 }
 
-.Canvas {
+.canvas {
   background-color: white;
   border: 1px solid black;
 }
 
-.CanvasContainer {
+.canvas-container {
   flex: 1;
 }
 
-.Control {
+.control {
   border: 1px solid black;
   display: flex;
   height: 40px;
@@ -43,18 +51,22 @@ body, #root {
   width: 160px;
 }
 
-.ControlContainer {
+.control-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.ControlsContainer {
+.controls-container {
   flex: 1;
 }
 
-.Level {
+.green {
+  background-color: green;
+}
+
+.level {
   align-items: center;
   border-right: 1px solid black;
   border-left: 1px solid black;
@@ -65,4 +77,20 @@ body, #root {
   padding: 0;
   text-align: center;
   width: 80px;
+}
+
+.lines {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.lines > div{
+  height: 10px;
+  margin: 10px;
+  width: 30px;
+}
+
+.red {
+  background-color: red;
 }

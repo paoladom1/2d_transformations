@@ -5,19 +5,19 @@ function ControlButton({ label, onIncrease, onDecrease, min = 1, max = 5 }) {
     const disableIncrease = label >= max;
   
     return (
-      <div className="Control">
+      <div className="control">
         <button
           disabled={disableDecrease}
           onClick={onDecrease}
-          className="Button"
+          className="button"
         >
           -
         </button>
-        <div className="Level">{String(label)}</div>
+        <div className="level">{String(label)}</div>
         <button
           disabled={disableIncrease}
           onClick={onIncrease}
-          className="Button"
+          className="button"
         >
           +
         </button>

@@ -1,6 +1,45 @@
-# Getting Started with Create React App
+# 2D Transformations
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Overview
+
+All transformations (translation, scalation and rotation) controls affect both axis equally, 
+which means increasing the translation by one, increases the value of `x` and `y` by one.
+
+Also, this canvas has its origin at the top left, which means, increasing `y` would move the square lower visually and increasing `x` would move the square to the right.
+
+## Transformations
+
+As stated before, this project contains translation, scalation and rotation, each will be described more detailed below.
+
+The original points are `P{(75, 25), (75, 50), (100, 50), (100, 25)}`, this creates a square of size `25` inside the canvas.
+
+### Translation 
+
+This transformation moves the object to a different position on the canvas. Each point translates by adding the translation vector to the original coordinates `X, Y` to get the new coordinates `X', Y'`. When the square is at the original position, the level according to the transformation controls is 0. You can increase level up to 5, and each level adds 30 to each point's coord.
+
+### Scalation
+
+This transformation is used to change the size of an object. It can be achieved by multiplying the original coordinates with the scaling factor to get the new result. The starting level of this transformation is 1, which is the original size of the square (25) and it can be increased up to 5, meaning that the square gets to grow 5 times its original size. The method used to scale the square is based on changing the coordinates of the points that generate the square, which means that with a level 2 of scale, the coordinates for each point will be two times what they were initially.
+
+### Rotation
+
+This transformation rotates an object with respect to an angle in a two dimensional plane. When the square is at the original position, the level is 0. You can increase level up to 5 and each level rotates the square in 10° clockwise based on the origin (top left corner).
+
+## Requirements
+
+- nodejs 12+
+- npm 6+ (or equivalent yarn)
+
+## Usage
+
+To run the development server locally run the following commands:
+```bash
+npm install
+npm start
+``` 
+For more information on how to run this for a production build, you can read the information below:
 
 ## Available Scripts
 

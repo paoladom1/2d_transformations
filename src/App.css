@@ -44,6 +44,12 @@ body, #root {
   flex: 1;
 }
 
+.canvas-div {
+  height: 500px;
+  overflow: scroll;
+  width: 100%;
+}
+
 .control {
   border: 1px solid black;
   display: flex;

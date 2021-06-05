@@ -69,6 +69,12 @@ function App() {
     setScale(scale - 1);
   };
 
+  const resetValues = () => {
+    setRotation(0);
+    setTraslation(0);
+    setScale(1);
+  }
+
   return (
     <div className="container">
       <div className="canvas-container">
@@ -114,6 +120,9 @@ function App() {
             onIncrease={increaseRotation}
             onDecrease={decreaseRotation}
           />
+        </div>
+        <div className="reset-btn">
+          <button onClick={resetValues}>Reset default values</button>
         </div>
       </div>
     </div>

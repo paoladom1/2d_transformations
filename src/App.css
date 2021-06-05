@@ -25,6 +25,7 @@ body, #root {
 
 .button {
   background: none;
+  background-color: white;
   border: none;
   color: inherit;
   cursor: pointer;
@@ -68,6 +69,7 @@ body, #root {
 
 .level {
   align-items: center;
+  background-color: white;
   border-right: 1px solid black;
   border-left: 1px solid black;
   display: flex;
@@ -87,10 +89,21 @@ body, #root {
 
 .lines > div{
   height: 10px;
-  margin: 10px;
+  margin: 5px 10px;
   width: 30px;
 }
 
 .red {
   background-color: red;
+}
+
+.reset-btn {
+  margin-top: 20px;
+}
+
+.reset-btn > button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 7px;
 }

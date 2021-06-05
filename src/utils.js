@@ -1,7 +1,7 @@
 import * as math from "mathjs";
 
 const CANVAS_WIDTH = 900;
-const CANVAS_HEIGHT = 600;
+const CANVAS_HEIGHT = 800;
 
 const ROTATION_STEP = (10 * Math.PI) / 180;
 const STEP = 30;
@@ -36,15 +36,15 @@ const drawLine = (p1, p2, ctx) => {
 
 const applyTransformationsToPoint = (
   [x, y],
-  { traslation, scale, rotation }
+  { translation, scale, rotation }
 ) => {
   // initial coords vector/matrix
   const coords_matrix = math.matrix([x, y, 1]);
 
   // transformations
   const traslate_matrix = math.matrix([
-    [1, 0, STEP * traslation],
-    [0, 1, STEP * traslation],
+    [1, 0, STEP * translation],
+    [0, 1, STEP * translation],
     [0, 0, 1],
   ]);
   const scale_matrix = math.matrix([
@@ -62,7 +62,7 @@ const applyTransformationsToPoint = (
     [0, 0, 1],
   ]);
 
-  // traslation x rotation = inter_res
+  // translation x rotation = inter_res
   const {
     _data: [new_x, new_y],
   } = math.multiply(

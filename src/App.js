@@ -18,7 +18,7 @@ function App() {
   const canvasRef = useRef(null);
 
   // values to handle the levels of mutations
-  const [traslation, setTraslation] = useState(0);
+  const [translation, setTranslation] = useState(0);
   const [rotation, setRotation] = useState(0);
   const [scale, setScale] = useState(1);
 
@@ -36,21 +36,21 @@ function App() {
 
     const ctx = canvasRef.current.getContext("2d");
     const connections = CONNECTIONS.map(([p1, p2]) => {
-      const transformations = { traslation, scale, rotation };
+      const transformations = { translation, scale, rotation };
       const new_p1 = applyTransformationsToPoint([p1.x, p1.y], transformations);
       const new_p2 = applyTransformationsToPoint([p2.x, p2.y], transformations);
 
       return [new_p1, new_p2];
     });
     redrawSquare(connections, ctx);
-  }, [traslation, rotation, scale]);
+  }, [translation, rotation, scale]);
 
-  const increaseTraslation = () => {
-    setTraslation(traslation + 1);
+  const increaseTranslation = () => {
+    setTranslation(translation + 1);
   };
 
-  const decreaseTraslation = () => {
-    setTraslation(traslation - 1);
+  const decreaseTranslation = () => {
+    setTranslation(translation - 1);
   };
 
   const increaseRotation = () => {
@@ -61,17 +61,17 @@ function App() {
     setRotation(rotation - 1);
   };
 
-  const increasescale = () => {
+  const increaseScale = () => {
     setScale(scale + 1);
   };
 
-  const decreasescale = () => {
+  const decreaseScale = () => {
     setScale(scale - 1);
   };
 
   const resetValues = () => {
     setRotation(0);
-    setTraslation(0);
+    setTranslation(0);
     setScale(1);
   }
 
@@ -96,20 +96,20 @@ function App() {
       </div>
       <div className="controls-container">
         <div className="control-container">
-          <span>Traslation Control</span>
+          <span>Translation Control</span>
           <ControlButton
             min={0}
-            label={traslation}
-            onIncrease={increaseTraslation}
-            onDecrease={decreaseTraslation}
+            label={translation}
+            onIncrease={increaseTranslation}
+            onDecrease={decreaseTranslation}
           />
         </div>
         <div className="control-container">
           <span>Scalation Control</span>
           <ControlButton
             label={scale}
-            onIncrease={increasescale}
-            onDecrease={decreasescale}
+            onIncrease={increaseScale}
+            onDecrease={decreaseScale}
           />
         </div>
         <div className="control-container">
